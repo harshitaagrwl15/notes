@@ -1,0 +1,8 @@
+Following are my findings:
+Initially, I researched the difference between Cloudability and Cloudhealth so that I could figure out which one should be used for monitoring multiple AWS Accounts together on a single portal. So, I found out both of them are cloud cost management and optimization platforms. The following are the differences between them: 
+	-> CloudHealth is known for its comprehensive set of features that cover cost management, optimization, security, and governance. It provides detailed insights into cloud spending, cost allocation, resource utilization, and recommendations for cost savings. It also offers tools for rightsizing instances, automating tasks, and enforcing compliance policies.
+
+	-> Cloudability also offers cost management and optimization features, including cost reporting, budgeting, and recommendations for cost optimization. While it may not have the same breadth of features as CloudHealth, it can still be effective for managing cloud expenses.
+
+I have started exploring terraform code to setup the cloudability dashboard. I am follwoing the terraform official doc for the same https://registry.terraform.io/providers/skyscrapr/cloudability/latest/docs
+ 
