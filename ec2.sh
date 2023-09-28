@@ -6,3 +6,6 @@ aws ec2 describe-vpc-endpoints --query 'VpcEndpoints[].{ServiceName:ServiceName,
 
 
 aws ec2 describe-vpc-endpoints --query 'VpcEndpoints[].{EndpointID:VpcEndpointId, DNSName:DnsEntries[0].DnsName}' --output table
+
+aws ec2 describe-vpc-endpoints --vpc-endpoint-ids YOUR_ENDPOINT_ID
+
