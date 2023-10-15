@@ -4,5 +4,5 @@ aws iam list-users > iam_users_account1.json
 To check active IAM users and their activity using the AWS CLI, you can use the `list-users` and `generate-credential-report` commands in combination. The `list-users` command lists all IAM users, and the `generate-credential-report` command generates a credential report, which includes information about the last time each IAM user's credentials were used.
 aws iam generate-credential-report
 aws iam get-credential-report --query 'Content'
-aws iam get-credential-report --query 'Content' --output text | base64 --decode
+aws iam get-credential-report --query 'Content' --output text | base64 --decode > credentials-report.txt
 
