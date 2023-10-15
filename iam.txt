@@ -6,3 +6,7 @@ aws iam generate-credential-report
 aws iam get-credential-report --query 'Content'
 aws iam get-credential-report --query 'Content' --output text | base64 --decode > credentials-report.txt
 
+# getting cloudtrail log
+aws cloudtrail lookup-events --lookup-attributes AttributeKey=EventName,AttributeValue=ConsoleLogin > cloudtrail_events.json
+jq -r '.Events[] | [.EventName, .EventTime, .Username, .EventSource] | @csv' cloudtrail_events.json > cloudtrail_events.csv
+
