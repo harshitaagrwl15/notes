@@ -1,1 +1,1 @@
-https://gist.github.com/haranjackson/1d3d4bf31c160ca10c477b177e558ba9
+https://awstip.com/amazon-polly-for-beginners-c51bf67d5a93
