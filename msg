@@ -10,3 +10,6 @@ https://www.linkedin.com/pulse/transforming-text-speech-my-aws-polly-project-lam
 amazon polly lambda function code https://github.com/ran-isenberg/aws-text-to-speech/blob/main/service/handlers/consumer.py
 
 amazon polly implementaion https://www.ranthebuilder.cloud/post/serverless-empowers-accessibility-convert-text-to-speech-with-amazon-polly
+
+
+https://agatakubat.pl/make-your-pi-speak-with-text-to-speech-fom-amazon-polly/
