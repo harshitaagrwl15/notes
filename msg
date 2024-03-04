@@ -13,3 +13,4 @@ amazon polly implementaion https://www.ranthebuilder.cloud/post/serverless-empow
 
 
 https://agatakubat.pl/make-your-pi-speak-with-text-to-speech-fom-amazon-polly/
+https://www.scaledrone.com/blog/text-to-speech-serverless-api-using-aws-polly/
