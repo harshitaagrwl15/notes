@@ -34,6 +34,9 @@ def perform_operations_in_directory(directory, old_prefix, new_prefix):
     repo_pattern = re.compile(r'source\s*=\s*["\'](' + re.escape(old_prefix) + r')(.*?)["\']')
 
     for root, dirs, files in os.walk(directory):
+        # Skip the .terraform directory
+        dirs[:] = [d for d in dirs if d != '.terraform']
+
         for file in files:
             if file.endswith('.tf'):
                 file_path = os.path.join(root, file)
@@ -44,7 +47,7 @@ def perform_operations_in_directory(directory, old_prefix, new_prefix):
                 updated_content = repo_pattern.sub(lambda m: f'source = "{new_prefix}{m.group(2)}"', content)
                 
                 # Write the updated content back to the file
-                with open(file_path, 'w') as f:
+                with open(file_path, 'w', newline='') as f:
                     f.write(updated_content)
 
 def main():
