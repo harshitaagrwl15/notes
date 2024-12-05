@@ -7,9 +7,17 @@ def find_and_replace_repos_in_tf_files(base_dir, old_prefix, new_prefix):
 
     # Walk through the base directory to find .tf files
     for root, dirs, files in os.walk(base_dir):
+        # Skip the .terraform directory
+        dirs[:] = [d for d in dirs if d != '.terraform']
+
         for file in files:
             if file.endswith('.tf'):
                 file_path = os.path.join(root, file)
+                
+                # Skip files in .terraform directory
+                if '.terraform' in file_path.split(os.sep):
+                    continue
+
                 with open(file_path, 'r') as f:
                     content = f.read()
 
